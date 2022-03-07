@@ -32,11 +32,16 @@ for (var i = 0; i<= lenguajes.length; i++){
     document.write("<li>"+lenguajes[i]+"</li>");
 }
 
+//Es un método para los arreglos de manera que pueda iterar sobre cada elemento dentro.
+//Como parametros tiene: element (muestra elemento dentro del arreglo), index (posición), arreglo (muestra arreglo);
+
 lenguajes.forEach((elemento)=>{
     document.write("<li>"+elemento+"</li>");
 });
+
 */
 //Los 3 funcionan de igual manera
+//For in        //Accede a las propiedades del array.
 for(let lenguaje in lenguajes){
     document.write("<li>"+lenguajes[lenguaje]+"</li>");
 }
