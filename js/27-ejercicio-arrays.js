@@ -9,7 +9,10 @@
 6. Búsqueda de un valor introducido por el usuario, que nos diga si lo encuentra y su índice
 (Se valora el uso de funciones)
 */
-/*
+
+
+
+
 var numeros = [];
 var nuevo = "";
 
@@ -83,8 +86,13 @@ if (busqueda == A_bus){
 }else{
     console.log("No se encontraron resultados");
 }
+var busqueda = array_entero.findIndex(arreglo => arreglo == entrada_busqueda);
 
-*/
+
+
+
+
+/*
 function mostrarArray(elementos, textoCustom = ""){
     document.write("<h1>Contenido del array "+textoCustom+"</h1>");
     document.write("<ul>");
@@ -107,7 +115,7 @@ document.write("<h1>Contenido del array</h1>");
 numeros.forEach((numero, index) => {
     document.write("<strong>"+numero+"</strong></br>")
 }); 
-Opción 2 usando una funtion*/
+Opción 2 usando una funtion
 mostrarArray(numeros);
 
 //Mostrar array en la consola
@@ -135,3 +143,5 @@ if (posicion && posicion != -1){
 }else{
     document.write("<h1>NO ENCONTRADO</h1>");
 }
+
+*/
