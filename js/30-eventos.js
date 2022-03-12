@@ -24,6 +24,7 @@ window.addEventListener('load', () => {
     //Captura evento con addEventListener. Se quita el evento de la etiqueta de HTML <onclick>
     boton.addEventListener('click', function(){
         cambiarColor();
+        this.style.border = "10px solid black";
     });
     
     //mouseover (Aplica el evento cuando pasa el mouse)
