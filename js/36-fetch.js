@@ -13,7 +13,15 @@ var div_janet = document.querySelector("#janet");
     .then(data => data.json())
     .then(user => {
         mostrarJanet(user.data);
-
+        return getInfo();
+    })
+    .then(data => {
+        //console.log(data);
+    })
+    //Capturar error con método catch
+    //Se ejecuta cuando no se comple alguna promesa. En este caso se manda a consola para capturar error
+    .catch(error =>{
+        console.log(error);
     });
 
     function getUsuarios(){
@@ -22,6 +30,21 @@ var div_janet = document.querySelector("#janet");
 
     function getJanet(){
         return fetch('https://reqres.in/api/users/2');
+    }
+
+    //Crear promesas
+    function getInfo(){
+        var profesor = {
+            nombre: "Victor",
+            apellidos: "Robles",
+            url: "https://twitter.com/victorobs"
+        };
+        return new Promise((resolve, reject) =>{
+            var profesor_string = JSON.stringify(profesor);
+            if(typeof profesor_string != 'string') return reject("error");
+
+            return resolve(profesor_string);
+        });
     }
 
     function listadoUsuarios(usuarios){
